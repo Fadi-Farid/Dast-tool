@@ -11,7 +11,7 @@ on:
 
 jobs:
   code-scan:
-    runs-on: [self-hosted, Linux, X64, zapserver]
+    runs-on: [self-hosted, Linux, X64, zap]
     steps:
       - name: llm
         run: echo "new"
