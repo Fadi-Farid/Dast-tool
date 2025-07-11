@@ -51,7 +51,7 @@ started = "```python"
 starting = False
 copying = False
 extracted_lines = []
-
+line_to_remove = "data not required"
 with open("dast_report.txt", "r", encoding="utf-8") as file:
     for line in file:
         if end_marker in line  and starting:
