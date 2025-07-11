@@ -14,8 +14,8 @@ api_key = 'vh7bqrauhothh2b0en7r53se5i'
 zap = ZAPv2(apikey=api_key)
 
 # Take target URL as input
-target = http://34.229.132.148:5000/
-code = https://github.com/Fadi-Farid/python-web-app/tree/main
+target = "http://34.229.132.148:5000"
+code = "https://github.com/Fadi-Farid/python-web-app/tree/main"
 # Crawl and scan web application
 zap.spider.scan(target)
 scan = zap.ascan.scan(target)
