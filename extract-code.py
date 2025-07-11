@@ -42,8 +42,8 @@ matched_files = re.findall(pattern, content)
 
 # Output the results
 #print("Extracted file names from dast_report.txt:")
-#for file_name in matched_files:
-    #print(file_name)
+for file_name in matched_files:
+    print(file_name)
 
 end_marker = "```"
 start_marker = file_name
