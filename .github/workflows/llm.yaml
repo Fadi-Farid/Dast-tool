@@ -11,7 +11,7 @@ on:
 
 jobs:
   code-scan:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout current repo (target)
         uses: actions/checkout@v3
