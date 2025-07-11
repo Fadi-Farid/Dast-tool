@@ -28,7 +28,7 @@ def RaisePR(GITHUB_TOKEN):
 
 def main():
 
-                command=(f'git clone https://github.com/Fadi-Farid/python-web-app.git')
+                command=(f'git clone https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
                 command=("git init && \
                 git checkout -b issue-fix && \
