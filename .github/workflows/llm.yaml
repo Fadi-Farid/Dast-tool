@@ -11,7 +11,7 @@ on:
 
 jobs:
   code-scan:
-    runs-on: self-hosted
+    runs-on: [self-hosted, zapserver]
     steps:
       - name: Checkout current repo (target)
         uses: actions/checkout@v3
