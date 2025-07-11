@@ -45,21 +45,34 @@ print("Extracted file names from dast_report.txt:")
 for file_name in matched_files:
     print(file_name)
 
+
 start_marker = "`app.py`"
-end_marker = "```"
-started = "```"
 starting = False
 copying = False
-
 extracted_lines = []
 
-with open("dast_report.txt", "r", encoding="utf-8") as file:
+with open("dast_reportf.txt", "r", encoding="utf-8") as file:
     for line in file:
-        if end_marker in line and copying and starting:
+        if end_marker in line  and starting:
             break
         if start_marker in line:
            copying = True
-        if copying and starting:
+        if  starting:
+            extracted_lines.append(line)
+        if started in line:
+            starting = True
+start_marker = "`app.py`"
+starting = False
+copying = False
+extracted_lines = []
+
+with open("dast_reportf.txt", "r", encoding="utf-8") as file:
+    for line in file:
+        if end_marker in line  and starting:
+            break
+        if start_marker in line:
+           copying = True
+        if  starting:
             extracted_lines.append(line)
         if started in line:
             starting = True
