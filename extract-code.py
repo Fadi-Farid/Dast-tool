@@ -66,7 +66,7 @@ with open("dast_report.txt", "r", encoding="utf-8") as file:
 # Output the result
 print("".join(extracted_lines))
 
-with open(file_name, "w") as f:
+with open("app.py", "w") as f:
     for entry in extracted_lines:
         f.write(entry)
 
