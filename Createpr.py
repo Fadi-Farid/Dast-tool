@@ -35,10 +35,8 @@ def main():
                 cp -f ../app.py . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
-                os.system(command)
-                password = input("Enter the target URL to scan: ").strip()
-                print(password)                
-                RaisePR(password)
+                os.system(command)              
+                RaisePR("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")
 
 if __name__ == "__main__":
     main()
