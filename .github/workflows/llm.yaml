@@ -13,6 +13,8 @@ jobs:
   code-scan:
     runs-on: [self-hosted, Linux, X64, zap]
     steps:
+      - name: Checkout current repo (target)
+        uses: actions/checkout@v3
       - name: llm
-        run: echo "new"
+        run: python3 python.py
  
