@@ -18,5 +18,4 @@ jobs:
         
       - name: Run Python Script
         run: |
-          echo 'print("Hello from Python!")' 
           python3 python.py
