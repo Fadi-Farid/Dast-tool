@@ -16,5 +16,5 @@ jobs:
       - name: Checkout current repo (target)
         uses: actions/checkout@v3
       - name: llm
-        run: python3 zap-scan.py
+        run: python3 Zap-scan.py
  
