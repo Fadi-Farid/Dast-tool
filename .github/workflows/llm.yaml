@@ -1,0 +1,22 @@
+name: LLM Code Scan
+
+on:
+  pull_request:
+    branches:
+      - main  # Adjust this to match the branch you want to protect
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  code-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current repo (target)
+        uses: actions/checkout@v3
+        
+      - name: Run Python Script
+        run: |
+          echo 'print("Hello from Python!")' 
+          python3 python.py
