@@ -27,12 +27,15 @@ def RaisePR(GITHUB_TOKEN):
         print("Response content:", response.text)
 
 def main():
+                
+                with open("output.txt", "r") as file:
+    r              file_name = file.read()
 
                 command=(f'git clone https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
                 command=("git init && \
                 git checkout -b issue-fix && \
-                cp -f ../app.py . && \
+                cp -f ../file_name . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
