@@ -11,7 +11,7 @@ def RaisePR(GITHUB_TOKEN):
     }
 
     data = {
-        "title": "AI Fix feature",
+        "title": "AI Fix for the issue",
         "body": "This PR implements the authentication feature using AIOps",
         "head": "issue-fix",
         "base": "main"
