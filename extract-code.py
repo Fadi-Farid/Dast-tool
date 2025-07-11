@@ -65,7 +65,7 @@ with open("dast_report.txt", "r", encoding="utf-8") as file:
 # Output the result
 print("".join(extracted_lines))
 
-print("value={file_name}")
+print("value=file_name")
 
 with open(file_name, "w") as f:
     for entry in extracted_lines:
