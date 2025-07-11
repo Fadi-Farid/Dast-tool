@@ -31,13 +31,11 @@ def main():
                 command=(f'git clone https://github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
                 command=("git init && \
-                git checkout  issue-fix && \
+                git checkout -b issue-fix && \
                 cp -f ../app.py . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)
-                with open("../password", "r", encoding="utf-8") as file:
-                   lines = file.read().strip()
                 password = input("Enter the target URL to scan: ").strip()
                 print(password)                
                 RaisePR(password)
