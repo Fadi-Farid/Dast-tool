@@ -14,6 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: llm
-        run: url="http://3.236.245.215/api/generate"
-        run: solution = requests.post(url, json=payload)
-        run: echo solution.json()
+        run: |
+          url="http://3.236.245.215/api/generate"
+          curl "$url" -d '{  "model": "llama3",  "prompt": "Why is the sky blue?",  "stream": false}'
+          solution = requests.post(url, json=payload)
+          echo solution.json()
