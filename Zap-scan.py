@@ -79,13 +79,6 @@ with open("dast_report.txt", "w") as f:
         f.write("\n" + "-"*80 + "\n")
 line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
 
-with open("dast_report.txt", "r", encoding="utf-8") as file:
-    lines = file.readlines()
-
-with open("dast_report.txt", "w", encoding="utf-8") as file:
-    for line in lines:
-        if line.strip() != line_to_remove:
-           file.write(line)
 
 
 print("✅ DAST report generated and saved to dast_report.txt.")
