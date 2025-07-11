@@ -21,7 +21,7 @@ jobs:
         run: python3 Zap-scan.py
       - name: extract code
         id: generate
-        run: python3 extract-code.py >> $GITHUB_OUTPUT
+        run: python3 extract-code.py
       - name: generate output
         run: echo "The value from step 1 is ${{ steps.generate.outputs.value }}"
       - name: extract code
