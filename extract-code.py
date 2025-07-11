@@ -52,7 +52,7 @@ starting = False
 copying = False
 extracted_lines = []
 
-with open("dast_reportf.txt", "r", encoding="utf-8") as file:
+with open("dast_report.txt", "r", encoding="utf-8") as file:
     for line in file:
         if end_marker in line  and starting:
             break
@@ -68,4 +68,10 @@ print("".join(extracted_lines))
 with open(file_name, "w") as f:
     for entry in extracted_lines:
         f.write(entry)
+with open("dast_report.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
 
+with open("dast_report.txt", "w", encoding="utf-8") as file:
+    for line in lines:
+        if line.strip() != line_to_remove:
+           file.write(line)
