@@ -1,0 +1,20 @@
+name: Dast report
+
+on:
+  pull_request:
+    branches:
+      - main  
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  code-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: llm
+        run: url = "http://3.236.245.215/api/generate"
+        run: curl "$url" -d '{  "model": "llama3",  "prompt": "Why is the sky blue?",  "stream": false}'
+        run: solution = requests.post(url, json=payload)
+        run: echo solution.json()
