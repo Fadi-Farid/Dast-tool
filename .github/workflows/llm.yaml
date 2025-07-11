@@ -12,6 +12,8 @@ on:
 jobs:
   code-scan:
     runs-on: [self-hosted, Linux, X64, zap]
+    env:
+      GITHUB_TOKEN: "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"
     steps:
       - name: Checkout current repo (target)
         uses: actions/checkout@v3
