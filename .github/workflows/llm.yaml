@@ -20,5 +20,5 @@ jobs:
       - name: extract code
         run: python3 extract-code.py
       - name: extract code
-        run: Createpr.py
+        run: python3 Createpr.py
  
