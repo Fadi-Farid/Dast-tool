@@ -66,3 +66,26 @@ for item in new_report:
     print(f'✅ Solution is generated for Vulnerability_No: {i}.')
     report.append(report_entry)
 # Save DAST report to file
+# Save DAST report to file 
+
+with open("dast_report.txt", "w") as f:
+    for entry in report:
+        f.write(f"Vulnerability No: {entry['Vulnerability_No']}\n") 
+        f.write(f"Name: {entry['Name']}\n")
+        f.write(f"URL: {entry['url']}\n")
+        f.write(f"Risk: {entry['risk']}\n")
+        f.write(f"Tags: {', '.join(entry['tags'])}\n")
+        f.write(f"{entry['solution']}\n")
+        f.write("\n" + "-"*80 + "\n")
+line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
+
+with open("dast_report.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+
+with open("dast_report.txt", "w", encoding="utf-8") as file:
+    for line in lines:
+        if line.strip() != line_to_remove:
+           file.write(line)
+
+
+print("✅ DAST report generated and saved to dast_report.txt.")
