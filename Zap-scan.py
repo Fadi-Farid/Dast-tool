@@ -5,10 +5,7 @@ from zapv2 import ZAPv2
 from requests.exceptions import ProxyError
 import json
 
-# Load pre-trained LLM model and tokenizer
-model_name = "cognitivecomputations/dolphin-2.8-experiment26-7b-preview"
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
-model = AutoModelForCausalLM.from_pretrained(model_name,trust_remote_code=True)
+
 # Initialize ZAP API client with API key
 api_key = 'vh7bqrauhothh2b0en7r53se5i'
 zap = ZAPv2(apikey=api_key)
