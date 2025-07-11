@@ -17,7 +17,7 @@ def RaisePR(GITHUB_TOKEN):
         "base": "main"
     }
 
-    response = requests.post("https://github.com/Fadi-Farid/python-web-app/pulls", headers=headers, json=data)
+    response = requests.post("https://api.github.com/repos/Fadi-Farid/python-web-app/pulls", headers=headers, json=data)
 
     if response.status_code == 201:
         print("Pull request created successfully.")
@@ -35,8 +35,9 @@ def main():
                 cp -f ../app.py . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
-                os.system(command)              
-                RaisePR("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")
+                os.system(command)   
+                token = os.getenv("GITHUB_TOKEN")
+                RaisePR(GITHUB_TOKEN)
 
 if __name__ == "__main__":
     main()
