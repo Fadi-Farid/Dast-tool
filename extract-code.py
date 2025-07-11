@@ -12,7 +12,7 @@ def list_github_files(owner, repo):
 
 # Example usage
 files = list_github_files("Fadi-Farid", "Dast-tool")
-print(files)
+#print(files)
 
 
 with open('dast_report.txt', 'r', encoding='utf-8') as file:
@@ -23,7 +23,7 @@ words = content.split()
 
 # Find matches
 matched_files = [file_name for file_name in files if file_name in words]
-print("Matched file names:", matched_files)
+#print("Matched file names:", matched_files)
 
 
 
@@ -41,9 +41,9 @@ pattern = r'\b[\w\-]+\.(?:' + '|'.join(ext.strip('.') for ext in file_extensions
 matched_files = re.findall(pattern, content)
 
 # Output the results
-print("Extracted file names from dast_report.txt:")
+#print("Extracted file names from dast_report.txt:")
 for file_name in matched_files:
-    print(file_name)
+    #print(file_name)
 
 end_marker = "```"
 start_marker = file_name
@@ -63,7 +63,7 @@ with open("dast_report.txt", "r", encoding="utf-8") as file:
         if started in line:
             starting = True
 # Output the result
-print("".join(extracted_lines))
+#print("".join(extracted_lines))
 
 print("value=",file_name)
 
