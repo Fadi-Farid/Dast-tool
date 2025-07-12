@@ -92,7 +92,7 @@ def main():
                         starting = True
                     # Output the result
                 print("".join(extracted_lines))
-                with open(file_name, "r") as f:
+                with open(file_name, "w") as f:
                     for entry in extracted_lines:
                         f.write(entry)
 
@@ -100,7 +100,7 @@ def main():
                 os.system(command)
                 command=("git init && \
                 git checkout -b issue-fix && \
-                cp -f ../file_name . && \
+                cp -f file_name . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
