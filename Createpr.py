@@ -39,8 +39,7 @@ def RaisePR(GITHUB_TOKEN):
 
 def main():
                 Token = os.getenv("GITHUB_TOKEN")
-                print("imp")
-                print(Token)
+                #print(Token)
                 
                 # Example usage
                 files = list_github_files("Fadi-Farid", "python-web-app")
@@ -95,7 +94,7 @@ def main():
                         if started in line:
                             starting = True
                         # Output the result
-                print("".join(extracted_lines))
+                #print("".join(extracted_lines))
                 with open(file_name, "w") as f:
                     for entry in extracted_lines:
                         f.write(entry)
