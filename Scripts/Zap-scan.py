@@ -42,7 +42,7 @@ for item in new_report:
       f"Vulnerability Reference: {reference}\n"
       f"Description: {description}\n"
       f"ZAP Recommendation: {solution_provided}\n"
-      f"Fix Required: Please provide the necessary code changes and specify the file name where the changes should be applied with the updated code in the repository '{code}'"
+      f"Fix Required: Please provide the necessary code changes and specify the file name where the changes should be applied with the updated code in the repository '{code}' for the provided web-app.py"
      ),
      "stream": False
     }
