@@ -28,6 +28,7 @@ def RaisePR(GITHUB_TOKEN):
 
 def main():
                 Token = os.getenv("GITHUB_TOKEN")
+                print("imp")
                 print(Token)
                 def list_github_files(owner, repo):
                     api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/"
@@ -102,7 +103,7 @@ def main():
                 command=(
                     "git init && \
                     git checkout -b issue-fix && \
-                    cp -f $file_name . && \
+                    cp -f $file_name /python-web-app && \
                     git add . && git commit -m 'Fix Commit' &&\
                     git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix"
                 )
