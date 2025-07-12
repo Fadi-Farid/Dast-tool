@@ -105,6 +105,7 @@ def main():
                 git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
                 token = os.getenv("GITHUB_TOKEN")
+                print(GITHUB_TOKEN)
                 RaisePR(GITHUB_TOKEN)
 
 if __name__ == "__main__":
