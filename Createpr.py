@@ -93,7 +93,7 @@ def main():
                     # Output the result
                 print("".join(extracted_lines))
                 with open(file_name, "w") as f:
-                    for entry in extracted_lines:
+                    for entry in extracted_lines:
                         f.write(entry)
 
                 command=(f'git clone https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git')
