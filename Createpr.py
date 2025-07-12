@@ -102,7 +102,7 @@ def main():
                 git checkout -b issue-fix && \
                 cp -f file_name . && \
                 git add . && git commit -m 'Fix Commit' &&\
-                git push https://github.com/Fadi-Farid/python-web-app.git issue-fix")
+                git push https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
                 token = os.getenv("GITHUB_TOKEN")
                 print(GITHUB_TOKEN)
