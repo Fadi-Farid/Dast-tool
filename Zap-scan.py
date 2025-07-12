@@ -11,7 +11,7 @@ api_key = 'vh7bqrauhothh2b0en7r53se5i'
 zap = ZAPv2(apikey=api_key)
 
 # Take target URL as input
-target = "http://13.216.2.173:5000"
+target = "44.192.94.78:5000"
 code = "https://github.com/Fadi-Farid/python-web-app/tree/main"
 # Crawl and scan web application
 zap.spider.scan(target)
@@ -36,7 +36,7 @@ for item in new_report:
     description = item["description"]
     reference = item["reference"]
     solution_provided = item["solution"]
-    url = "http://44.201.96.118/api/generate"
+    url = "http://44.200.150.120/api/generate"
     payload = {
      "model": "llama3",
      "prompt": (
@@ -79,6 +79,7 @@ with open("dast_report.txt", "w") as f:
         f.write("\n" + "-"*80 + "\n")
 line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
 
-
+command=(f'cat dast_report.txt')
+os.system(command)
 
 print("✅ DAST report generated and saved to dast_report.txt.")
