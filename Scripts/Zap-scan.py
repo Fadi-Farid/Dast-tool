@@ -11,7 +11,7 @@ zap = ZAPv2(apikey=api_key)
 
 # Take target URL as input
 target = "http://44.192.94.78:5000"
-code = "https://github.com/Fadi-Farid/python-web-app/tree/main"
+code = "https://github.com/Fadi-Farid/Dast-tool.git"
 # Crawl and scan web application
 zap.spider.scan(target)
 scan = zap.ascan.scan(target)
