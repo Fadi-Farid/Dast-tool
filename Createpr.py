@@ -2,7 +2,7 @@ import requests
 import os
 import re
 
-Token = os.getenv("GITHUB_TOKEN")
+
 def RaisePR(GITHUB_TOKEN):
 
     headers = {
@@ -27,7 +27,7 @@ def RaisePR(GITHUB_TOKEN):
         print("Response content:", response.text)
 
 def main():
-  
+                Token = os.getenv("GITHUB_TOKEN")
                 def list_github_files(owner, repo):
                     api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/"
                     response = requests.get(api_url)
