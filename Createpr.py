@@ -2,7 +2,7 @@ import requests
 import os
 import re
 
-GITHUB_TOKEN = "" # os.getenv("GHE_TOKEN")
+Token = os.getenv("GITHUB_TOKEN")
 def RaisePR(GITHUB_TOKEN):
 
     headers = {
@@ -105,8 +105,8 @@ def main():
                 git push https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
                 token = os.getenv("GITHUB_TOKEN")
-                print(GITHUB_TOKEN)
-                RaisePR(GITHUB_TOKEN)
+                print(Token)
+                RaisePR(Token)
 
 if __name__ == "__main__":
     main()
