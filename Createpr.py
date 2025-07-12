@@ -105,9 +105,13 @@ def main():
                     git checkout -b issue-fix && \
                     cp -f $file_name /python-web-app && \
                     git add . && git commit -m 'Fix Commit' &&\
-                    git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix"
                 )
                 os.system(command)   
+
+                    
+                clone_command = f"git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git"
+                subprocess.run(clone_command, shell=True, check=True)
+
 
                
                 RaisePR(Token)
