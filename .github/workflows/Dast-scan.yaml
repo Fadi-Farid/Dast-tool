@@ -18,8 +18,8 @@ jobs:
     steps:
       - name: Checkout current repo (target)
         uses: actions/checkout@v3
-      - name: llm
-        run: python3 Zap-scan.py
-      - name: extract code
-        run: python3 Createpr.py
+      - name: Zap-scan
+        run: python3 Scripts/Zap-scan.py
+      - name: PR creation
+        run: python3 Scripts/Createpr.py
  
