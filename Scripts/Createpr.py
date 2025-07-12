@@ -28,7 +28,7 @@ def RaisePR(GITHUB_TOKEN):
         "base": "main"
     }
 
-    response = requests.post("https://api.github.com/repos/Fadi-Farid/python-web-app/pulls", headers=headers, json=data)
+    response = requests.post("https://api.github.com/repos/Fadi-Farid/Dast-tool/pulls", headers=headers, json=data)
 
     if response.status_code == 201:
         print("Pull request created successfully.")
@@ -42,7 +42,7 @@ def main():
                 #print(Token)
                 
                 # Example usage
-                files = list_github_files("Fadi-Farid", "python-web-app")
+                files = list_github_files("Fadi-Farid", "Dast-tool")
                 print(files)
                 
                 
@@ -99,7 +99,7 @@ def main():
                     for entry in extracted_lines:
                         f.write(entry)
                 print("file_name:",file_name)
-                command=(f'git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git')
+                command=(f'git clone https://{Token}@github.com/Fadi-Farid/Dast-tool.git')
                 os.system(command)
           
                 commands = f"""
@@ -109,7 +109,7 @@ def main():
                 echo "{file_name}" && \
                 git add . && \
                 git commit -m 'Fix Commit' && \
-                git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix 
+                git push https://{Token}github.com/Fadi-Farid/Dast-tool.git issue-fix 
                 """
                 
                 subprocess.run(commands, shell=True, check=True)
