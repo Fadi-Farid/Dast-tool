@@ -82,7 +82,6 @@ print("✅ DAST report generated and saved to dast_report.txt.")
 
 with open('dast_report.txt', 'r') as file:
     for line in file:
-        print(line.strip())  
-
+        print(line.strip())
 
 
