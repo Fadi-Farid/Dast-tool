@@ -60,9 +60,9 @@ for item in new_report:
         "url": item["url"],
         "risk": item["risk"],
         "tags" : item["tags"],
-        "Vulnerability Reference: {reference},
-        "Description: {description},
-        "ZAP Recommendation: {solution_provided},
+        "Vulnerability Reference": {reference},
+        "Description": {description},
+        "ZAP Recommendation": {solution_provided},
         "solution": readable_output
     }
     print(f'✅ Solution is generated for Vulnerability_No: {i}.')
