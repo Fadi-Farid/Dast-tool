@@ -4,7 +4,6 @@ import requests
 from zapv2 import ZAPv2
 from requests.exceptions import ProxyError
 import json
-import os
 
 # Initialize ZAP API client with API key
 api_key = 'vh7bqrauhothh2b0en7r53se5i'
@@ -79,7 +78,12 @@ with open("dast_report.txt", "w") as f:
         f.write("\n" + "-"*80 + "\n")
 line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
 
-command=(f'cat dast_report.txt')
-os.system(command)
-
 print("✅ DAST report generated and saved to dast_report.txt.")
+
+with open('dast_report.txt', 'r') as file:
+    # Read and print each line
+    for line in file:
+        print(line.strip())  # 
+
+
+
