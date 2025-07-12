@@ -100,17 +100,17 @@ def main():
                 print("file_name:",file_name)
                 command=(f'git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
-                command=(
-                    "git init && \
-                    git checkout -b issue-fix && \
-                    cp -f $file_name /python-web-app && \
-                    git add . && git commit -m 'Fix Commit' "
-                )
-                os.system(command)   
-
-                    
-                clone_command = f"git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git"
-                subprocess.run(clone_command, shell=True, check=True)
+          
+                commands = f"""
+                cd python-web-app && \
+                git checkout -b issue-fix && \
+                cp -f ../{file_name} . && \
+                git add . && \
+                git commit -m 'Fix Commit' && \
+                git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix
+                """
+                
+                subprocess.run(commands, shell=True, check=True)
 
 
                
