@@ -105,9 +105,10 @@ def main():
                 cd python-web-app && \
                 git checkout -b issue-fix && \
                 cp -f ../{file_name} . && \
+                echo "{file_name}" && \
                 git add . && \
                 git commit -m 'Fix Commit' && \
-                git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix
+                git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix 
                 """
                 
                 subprocess.run(commands, shell=True, check=True)
