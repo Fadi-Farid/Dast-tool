@@ -4,7 +4,7 @@ import requests
 from zapv2 import ZAPv2
 from requests.exceptions import ProxyError
 import json
-
+import os
 
 # Initialize ZAP API client with API key
 api_key = 'vh7bqrauhothh2b0en7r53se5i'
