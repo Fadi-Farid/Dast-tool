@@ -106,7 +106,6 @@ def main():
                 cd Dast-tool && \
                 git checkout -b issue-fix && \
                 cp -f ../{file_name} . && \
-                echo "{file_name}" && \
                 git add . && \
                 git commit -m 'Fix Commit' && \
                 git push https://{Token}github.com/Fadi-Farid/Dast-tool.git issue-fix 
