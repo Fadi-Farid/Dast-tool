@@ -104,7 +104,7 @@ def main():
                     "git init && \
                     git checkout -b issue-fix && \
                     cp -f $file_name /python-web-app && \
-                    git add . && git commit -m 'Fix Commit' &&\
+                    git add . && git commit -m 'Fix Commit' "
                 )
                 os.system(command)   
 
