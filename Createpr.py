@@ -100,7 +100,7 @@ def main():
                 os.system(command)
                 command=("git init && \
                 git checkout -b issue-fix && \
-                cp -f file_name . && \
+                cp -f "$file_name" . && \
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
