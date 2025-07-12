@@ -81,9 +81,8 @@ line_to_remove = "What is the best mitigation strategy for this vulnerability wi
 print("✅ DAST report generated and saved to dast_report.txt.")
 
 with open('dast_report.txt', 'r') as file:
-    # Read and print each line
     for line in file:
-        print(line.strip())  # 
+        print(line.strip())  
 
 
 
