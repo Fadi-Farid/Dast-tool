@@ -98,11 +98,13 @@ def main():
 
                 command=(f'git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
-                command=("git init && \
-                git checkout -b issue-fix && \
-                cp -f "$file_name" . && \
-                git add . && git commit -m 'Fix Commit' &&\
-                git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix")
+                command=(
+                    f"git init && "
+                    f"git checkout -b issue-fix && "
+                    f"cp -f \"{file_name}\" . && "
+                    f"git add . && git commit -m 'Fix Commit' && "
+                    f"git push https://{Token}@github.com/Fadi-Farid/python-web-app.git issue-fix"
+                )
                 os.system(command)   
 
                 print(Token)
