@@ -104,7 +104,7 @@ def main():
                 git add . && git commit -m 'Fix Commit' &&\
                 git push https://{GITHUB_TOKEN}@github.com/Fadi-Farid/python-web-app.git issue-fix")
                 os.system(command)   
-                token = os.getenv("GITHUB_TOKEN")
+
                 print(Token)
                 RaisePR(Token)
 
