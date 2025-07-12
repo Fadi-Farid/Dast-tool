@@ -80,17 +80,17 @@ def main():
                 copying = False
                 extracted_lines = []
             
-            
-                for line in file:
-                    if end_marker in line  and starting:
-                        break
-                    if start_marker in line:
-                       copying = True
-                    if  starting:
-                        extracted_lines.append(line)
-                    if started in line:
-                        starting = True
-                    # Output the result
+                with open("dast_report.txt", "r", encoding="utf-8") as file:
+                    for line in file:
+                        if end_marker in line  and starting:
+                            break
+                        if start_marker in line:
+                           copying = True
+                        if  starting:
+                            extracted_lines.append(line)
+                        if started in line:
+                            starting = True
+                        # Output the result
                 print("".join(extracted_lines))
                 with open(file_name, "w") as f:
                     for entry in extracted_lines:
