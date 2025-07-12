@@ -1,0 +1,12 @@
+from flask import Flask, make_response
+
+app = Flask(__name__)
+
+@app.before_request
+def add_x_frame_options():
+    response = make_response(render_template('your_template.html'))
+    response.headers["X-Frame-Options"] = "SAMEORIGIN"  # or "DENY" if you never expect the page to be framed
+    return response
+
+if __name__ == '__main__':
+    app.run(debug=True)
