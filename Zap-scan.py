@@ -22,7 +22,7 @@ while int(zap.ascan.status(scan)) < 100:
     print(f'Scan progress: {zap.ascan.status(scan)}%')
     time.sleep(5)
 scan_results = zap.core.alerts(target)
-print(f'Scan results: {scan_results}')
+#print(f'Scan results: {scan_results}')
 
 # Check the status of the scan
 print("✅ Scan results is generated.")
@@ -52,7 +52,7 @@ for item in new_report:
 
     response_json = solution.json()
     readable_output = response_json["response"].encode().decode("unicode_escape")
-    print(readable_output)
+    #print(readable_output)
 
     report_entry = {
         "Vulnerability_No": i,
@@ -60,6 +60,9 @@ for item in new_report:
         "url": item["url"],
         "risk": item["risk"],
         "tags" : item["tags"],
+        "Vulnerability Reference: {reference},
+        "Description: {description},
+        "ZAP Recommendation: {solution_provided},
         "solution": readable_output
     }
     print(f'✅ Solution is generated for Vulnerability_No: {i}.')
@@ -74,9 +77,12 @@ with open("dast_report.txt", "w") as f:
         f.write(f"URL: {entry['url']}\n")
         f.write(f"Risk: {entry['risk']}\n")
         f.write(f"Tags: {', '.join(entry['tags'])}\n")
+        f.write(f"{entry['Vulnerability Reference']}\n")
+        f.write(f"{entry['Description']}\n")
+        f.write(f"{entry['ZAP Recommendation']}\n")
         f.write(f"{entry['solution']}\n")
         f.write("\n" + "-"*80 + "\n")
-line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
+#line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
 
 print("✅ DAST report generated and saved to dast_report.txt.")
 
