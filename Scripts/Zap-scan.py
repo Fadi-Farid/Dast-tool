@@ -28,7 +28,7 @@ scan_results = zap.core.alerts(target)
 print("✅ Scan results is generated.")
 
 report = []
-new_report = scan_results[:1]
+new_report = scan_results[2:4]
 i=0
 for item in new_report:
     i=i+1
