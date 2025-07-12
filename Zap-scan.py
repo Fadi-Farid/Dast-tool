@@ -77,10 +77,10 @@ with open("dast_report.txt", "w") as f:
         f.write(f"URL: {entry['url']}\n")
         f.write(f"Risk: {entry['risk']}\n")
         f.write(f"Tags: {', '.join(entry['tags'])}\n")
-        f.write(f"{entry['Vulnerability Reference']}\n")
-        f.write(f"{entry['Description']}\n")
-        f.write(f"{entry['ZAP Recommendation']}\n")
-        f.write(f"{entry['solution']}\n")
+        f.write(f"Vulnerability Reference: {entry['Vulnerability Reference']}\n")
+        f.write(f"Description: {entry['Description']}\n")
+        f.write(f"ZAP Recommendation: {entry['ZAP Recommendation']}\n")
+        f.write(f"Solution provided: {entry['solution']}\n")
         f.write("\n" + "-"*80 + "\n")
 #line_to_remove = "What is the best mitigation strategy for this vulnerability with steps for python?"
 
