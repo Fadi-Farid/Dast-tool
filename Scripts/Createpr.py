@@ -103,7 +103,7 @@ def main():
                 os.system(command)
           
                 commands = f"""
-                cd python-web-app && \
+                cd Dast-tool && \
                 git checkout -b issue-fix && \
                 cp -f ../{file_name} . && \
                 echo "{file_name}" && \
