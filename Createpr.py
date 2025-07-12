@@ -97,7 +97,7 @@ def main():
                 with open(file_name, "w") as f:
                     for entry in extracted_lines:
                         f.write(entry)
-
+                print("file_name:",file_name)
                 command=(f'git clone https://{Token}@github.com/Fadi-Farid/python-web-app.git')
                 os.system(command)
                 command=(
