@@ -39,15 +39,6 @@ def main():
                 Token = os.getenv("GITHUB_TOKEN")
                 print("imp")
                 print(Token)
-                def list_github_files(owner, repo):
-                    api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/"
-                    response = requests.get(api_url)
-                    if response.status_code == 200:
-                        files = [item['name'] for item in response.json()]
-                        return files
-                    else:
-                        print("Failed to fetch repository contents.")
-                        return []
                 
                 # Example usage
                 files = list_github_files("Fadi-Farid", "Dast-tool")
