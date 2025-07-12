@@ -28,7 +28,7 @@ def RaisePR(GITHUB_TOKEN):
 
 def main():
                 Token = os.getenv("GITHUB_TOKEN")
-                 print(Token)
+                print(Token)
                 def list_github_files(owner, repo):
                     api_url = f"https://api.github.com/repos/{owner}/{repo}/contents/"
                     response = requests.get(api_url)
